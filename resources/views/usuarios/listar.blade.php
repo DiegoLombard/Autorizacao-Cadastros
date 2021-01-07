@@ -33,8 +33,9 @@
                                <td>{{$usuario->cargo }}</td>
                                <td>
                                        
-                                   
+                                   @can('update', User::class)
                                    <a href="{{route('usuarios.edit', $usuario->id)}}"><button class="btn btn-info btn-sm">Editar</button></a>
+                                   @endcan
                                </td>
                            </tr>
                            @endforeach
